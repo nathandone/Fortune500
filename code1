@@ -1,0 +1,9 @@
+import pandas as pd
+from bs4 import BeautifulSoup
+import requests
+
+url = 'https://corporate.walmart.com/news/2022/03/15/walmart-global-tech-accelerates-expansion-with-plans-to-hire-thousands-of-technologists-and-add-new-locations#:~:text=Walmart%20Global%20Tech%20now%20includes,invest%20in%20our%20current%20associates.'
+page = requests.get(url)
+soup = BeautifulSoup(page.text, 'html.parser')
+print(soup)
+
